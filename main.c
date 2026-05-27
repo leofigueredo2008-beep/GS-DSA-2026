@@ -44,7 +44,7 @@ void dados (){
     printf("Qual o nivel de bateria atual? \n");
     scanf("%f", &bater[total]);
 
-    while (bater[total] <= 0){
+    while (bater[total] <= 0 || bater[total]>100){
         printf("Valor de bateria invalido, por favor responda com seriedade\n");
         printf("Qual o nivel de bateria atual?\n ");
         scanf("%f", &bater[total]);
@@ -74,6 +74,10 @@ void visu_dados () {
     printf("|      VISUALIZACAO DOS DADOS       |\n");
     printf("-------------------------------------\n");
 
+    if (total == 0) {
+        printf("Nenhuma leitura registrada ainda.\n");
+    }
+
     printf("Sua temperatura atual e: %.2f graus celsius\n", temp[total-1]);
     printf("Sua bateria atual e: %.2f %%\n", bater[total-1]);
     if(comu[total-1] == 's' || comu[total-1] == 'S'){
@@ -89,6 +93,10 @@ void analise (){
     printf("|         ANALISE        |\n");
     printf("--------------------------\n");
 
+    if (total == 0) {
+        printf("Nenhuma leitura registrada ainda.\n");
+    }
+
     if(temp[total-1] > 80){
         printf("A temperatura do sistema esta maior que o esperado\n");
         printf("Por favor, aguarde o resfriamento do sistema\n");
@@ -101,8 +109,6 @@ void analise (){
         printf("Temperatura: OK\n");
     }
 
-    printf("");
-
     if(bater[total-1]<20 && bater[total-1]>10){
         printf("Recomendamos que você continue no modo economia de energia\n");
         printf("Bateria: RUIM\n");
@@ -112,8 +118,6 @@ void analise (){
     }else{
         printf("Bateria: OK\n");
     }
-
-    printf("");
 
     if(comu[total-1] == 'N' || comu[total-1] == 'n'){
         printf("Ha uma falha na comunicacao com a central de informacoes\n");
@@ -131,7 +135,6 @@ void historico (){
  
     if (total == 0) {
         printf("Nenhuma leitura registrada ainda.\n");
-        return;
     }
  
     printf("%-8s %-14s %-12s %-14s\n",
