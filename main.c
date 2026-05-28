@@ -112,7 +112,7 @@ void analise (){
     if(bater[total-1]<20 && bater[total-1]>10){
         printf("Recomendamos que você continue no modo economia de energia\n");
         printf("Bateria: RUIM\n");
-    }else if (bater[total-1]<10){
+    }else if (bater[total-1]<=10){
         printf("Carregue o sistema IMEDIATAMENTE\n");
         printf("Bateria: CRITICO\n");
     }else{
