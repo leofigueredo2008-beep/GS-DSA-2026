@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Sistema desenvolvido em linguagem C para monitorar informações operacionais de uma missão espacial simulada. O programa coleta dados de temperatura, nível de bateria e status de comunicação, armazena um histórico de até 10 leituras e emite alertas automáticos conforme os limites estabelecidos.
+Sistema desenvolvido em linguagem C para simular o monitoramento de uma missão espacial, acompanhando informações importantes como temperatura da nave, nível de bateria e status da comunicação. O programa registra até 10 leituras no histórico e emite alertas automáticos sempre que alguma situação de risco é identificada, ajudando no controle e segurança da missão.
 
 ---
 
