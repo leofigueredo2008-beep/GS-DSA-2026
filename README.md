@@ -41,14 +41,14 @@ float bater[10];   // Vetor de níveis de bateria (%)
 char comu[10];     // Vetor de status de comunicação ('S' ou 'N')
 ```
 
-O uso de **vetores** permite armazenar o histórico de até 10 leituras. A variável `total` funciona tanto como contador quanto como índice para a próxima posição disponível nos vetores.
+O uso de **vetores** permite guardar o histórico das últimas 10 leituras realizadas pelo sistema. Já a variável `total` é responsável por controlar quantas leituras foram registradas e indicar a próxima posição disponível para armazenar novos dados.
 
 ---
 
 ## Lógica das Funções
 
 ### `menu()`
-Imprime as 5 opções disponíveis e lê a escolha do usuário com `scanf`. O controle de fluxo é feito no `main()` via `switch(OP)`.
+A função exibe as 5 opções disponíveis no menu principal e recebe a escolha do usuário utilizando `scanf`. A partir da opção selecionada, o programa direciona o fluxo de execução no `main()` através da estrutura `switch(OP)`, chamando a função correspondente a cada operação do sistema.
 
 ### `dados()`
 1. Lê a temperatura e armazena em `temp[total]`
